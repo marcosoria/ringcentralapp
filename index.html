@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ring Central Test</title>
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACE2egAAAAAAADCIAAAAE8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREzMREREAABETMxEREzMzAiIjERETMDMDMyMRERMwMwIjIiEREwADAzMzIRETMDMzIiIwEREzMzAAIiAREREgAzACMxEREAAAAAADEREAMDADAwAREQAwIAIDABERATMzMzMQEREBIzMzMhAREREiIiIiERERERIiIiERH/xwAA4ccAAMAHAADABwAAwAMAAMADAADAAQAA4AEAAPgBAADwAQAA4AEAAOABAADoBQAA6AUAAPgHAAD8DwAA" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="css/ringcentral.css" />  
+</head>
+<body>
+  <div id="app" class="container">
+    Hello {{  nombre  }} 
+    <br />   
+    <div>
+      <p>Click to SMS: <a href="sms:+1234567890">+1234567890</a></p>
+      <p>Click to SMS with Text: <a href="sms:+1234567890?body=test_body">+1234567890</a></p>
+      <p>Click to Call: <a href="tel:+1234567888">+1234567888</a></p>                 
+    </div>
+  </div>
+  <script>    
+    //console.log(process.env);    
+    (function() {
+      var rcs = document.createElement("script");
+      rcs.src = "https://ringcentral.github.io/ringcentral-embeddable/adapter.js?appKey=lH-Uy_jMThSJeAV73bS7QA&appServer=https://platform.devtest.ringcentral.com&&redirectUri=http://localhost:5500/redirect.html&&stylesUri=http://localhost:5500/css/ringcentral.css";
+      var rcs0 = document.getElementsByTagName("script")[0];
+      rcs0.parentNode.insertBefore(rcs, rcs0);
+    })();
+  </script>            
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script type="text/javascript">  
+  let app = new Vue({
+    el: '#app',
+    data: {
+      nombre: 'Marco'      
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.Adapter_logo{
+  display:none !important;
+}
+
+.NavigationBar_root{
+  background-color:#1c5e7d !important;
+}
+
+.Adapter_header {
+  background: url(http://localhost:5500/images/streamphone_md.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
